@@ -12,11 +12,11 @@ const IndexPage = () => {
             </span>
           </Link>
           &nbsp;/
-          プログラミング入門 Web アプリコース
+          大規模 Web アプリ
         </div>
         <div className="mt-6">
           <h1 className="font-bold text-xl pb-1 border-b-2">
-            プログラミング入門 Web アプリコース
+            大規模 Web アプリ
             </h1>
         </div>
 

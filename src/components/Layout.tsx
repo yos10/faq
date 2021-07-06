@@ -16,8 +16,8 @@ const Layout: React.FunctionComponent<Props> = ({
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
 
-    <header>
-      <div className=" px-5 pt-5 pb-2 border-gray-100 border-b">
+    <header className="px-5 ">
+      <div className="max-w-4xl mx-auto pt-5 pb-2 border-gray-100 border-b">
         <Link href="/">
           <div className="flex items-center">
             <img className="icon ml-1 mb-0.5 cursor-pointer" src="/images/nyobiko.png" />
@@ -33,14 +33,16 @@ const Layout: React.FunctionComponent<Props> = ({
 
     { children}
 
-    <footer>
+    <footer className="">
       <hr />
       <div className="px-5 pt-3 pb-5 bg-gray-700 text-sm text-white font-bold">
-        <span>
-          <Link href="/">
-            FAQ・トラブルシューティング - N予備校プログラミングコース
+        <div className="max-w-4xl mx-auto">
+          <span>
+            <Link href="/">
+              FAQ・トラブルシューティング - N予備校プログラミングコース
           </Link>
-        </span>
+          </span>
+        </div>
       </div>
     </footer>
   </div >
