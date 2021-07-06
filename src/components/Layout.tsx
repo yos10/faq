@@ -7,7 +7,7 @@ type Props = {
 
 const Layout: React.FunctionComponent<Props> = ({
   children,
-  title = 'FAQ - N予備校プログラミングコース・トラブルシューティング',
+  title = 'FAQ・トラブルシューティング - N予備校プログラミングコース',
 }) => (
   <div>
     <Head>
@@ -15,15 +15,20 @@ const Layout: React.FunctionComponent<Props> = ({
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <header>
-      <h1>FAQ - N予備校プログラミングコース・トラブルシューティング</h1>
-    </header>
     {children}
+
     <footer>
       <hr />
-      <span>FAQ - N予備校プログラミングコース・トラブルシューティング</span>
+      <div className="px-5 py-3">
+        <span>
+          <Link href="/">
+            FAQ・トラブルシューティング - N予備校プログラミングコース
+          </Link>
+        </span>
+      </div>
     </footer>
   </div>
+
 )
 
 export default Layout;
