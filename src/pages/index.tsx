@@ -12,15 +12,15 @@ const IndexPage = () => {
             <p>
               こちらは、<strong className="text-blue-600 hover:text-blue-400 trainsition duration-300">
                 <Link href="https://www.nnn.ed.nico/pages/programming/">N予備校プログラミングコース</Link></strong>
-          を受講中のみなさんに向けた FAQ（よくある質問）ページです。
-        </p>
+              を受講中のみなさんに向けた FAQ（よくある質問）ページです。
+            </p>
             <p>
               このサイトでは、N予備校の
-             <span className="text-blue-600 hover:text-blue-400 transition duration-300">
+              <span className="text-blue-600 hover:text-blue-400 transition duration-300">
                 <Link href="https://www.nnn.ed.nico/questions">フォーラム Q&A </Link>
               </span>
-             をもとに、プログラミングに関するトラブルの対処法をまとめています。
-          </p>
+              をもとに、プログラミングに関するトラブルの対処法をまとめています。
+            </p>
           </div>
 
           <div className="mb-10">
@@ -66,22 +66,22 @@ const IndexPage = () => {
           <div>
             <h1 className="text-xl font-bold mt-5 py-2 px-3 bg-yellow-600 text-white">解決しないときは ……</h1>
             <p className="mt-3">このサイトに記載してある方法を試してもうまくいかない場合や、該当するページが存在しない場合は、
-            N予備校の
-             <span className="text-blue-600 hover:text-blue-400 transition duration-300">
+              N予備校の
+              <span className="text-blue-600 hover:text-blue-400 transition duration-300">
                 <Link href="https://www.nnn.ed.nico/questions">フォーラム Q&A </Link>
               </span>
-            で質問してみましょう！
-            </p>
+              で質問してみましょう！
+              </p>
             <p className="mt-3">質問するときは、
-             <ul className="list-disc ml-5">
+              <ul className="list-disc ml-5">
                 <li>取り組んでいる<strong>テキストの節</strong></li>
                 <li>直面している<strong>トラブルの内容</strong></li>
                 <li>トラブルやソースコードの<strong>スクリーンショットやコピー&ペースト</strong></li>
                 <li>お使いの <strong>PC の環境</strong>（ OS やそのバージョン、セキュリティソフトの有無・種類）</li>
                 <li>これまでに<strong>試してみたこと</strong></li>
               </ul>
-            を記載すると、解決する可能性が高まります。
-            </p>
+              を記載すると、解決する可能性が高まります。
+              </p>
           </div>
 
           <div className="flex mt-5">
@@ -96,14 +96,14 @@ const IndexPage = () => {
                 <div className="p-4 sm:flex items-center px-2">
                   <div className="pl-3 pb-2 sm:pl-2 sm:pb-0">
                     <div className="pt-0.5">
-                      <img src={`${process.env.GITHUB_PAGES ? '/faq' : ''}/images/cc.png`} width={88} height={31} />
+                      <img src="/faq/images/cc.png" width={88} height={31} />
                     </div>
                   </div>
                   <div className="ml-3 sm:w-72 leading-5 ">
                     このサイトは、
-                  <span className="text-blue-600 hover:text-blue-400 transition duration-300">クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</span>
-                  の下、提供されています。
-                </div>
+                    <span className="text-blue-600 hover:text-blue-400 transition duration-300">クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</span>
+                    の下、提供されています。
+                  </div>
                 </div>
               </Card>
             </div>
@@ -112,14 +112,14 @@ const IndexPage = () => {
                 <div className="p-4 sm:flex items-center px-2">
                   <div className="pl-3 pb-2 sm:pl-2 sm:pb-0">
                     <div className="icon">
-                      <img src={`${process.env.GITHUB_PAGES ? '/faq' : ''}/images/github.png`} width={100} height={100} />
+                      <img src="/faq/images/github.png" width={100} height={100} />
                     </div>
                   </div>
                   <div className=" ml-3 sm:w-96 leading-5 ">
                     このサイトは、どなたでも記述の追加・変更提案ができます。
-                  練習問題の提出と同様に<span className="text-blue-600 hover:text-blue-400 transition duration-300"> GitHub リポジトリ</span>
-                  をフォークし、プルリクエストを送ってください。
-                </div>
+                    練習問題の提出と同様に<span className="text-blue-600 hover:text-blue-400 transition duration-300"> GitHub リポジトリ</span>
+                    をフォークし、プルリクエストを送ってください。
+                  </div>
                 </div>
               </Card>
             </div>

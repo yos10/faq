@@ -22,7 +22,7 @@ const Layout: React.FunctionComponent<Props> = ({
         <Link href="/">
           <div className="flex items-center">
             <div className="icon ml-1 mb-0.5 cursor-pointer">
-              <img src={`${process.env.GITHUB_PAGES ? '/faq' : ''}/images/nyobiko.png`} width={100} height={100} />
+              <img src="/faq/images/nyobiko.png" width={100} height={100} />
             </div>
             <h1 className="leading-4 pl-4 cursor-pointer">
               <div className="ml-1">N予備校プログラミングコース</div>
@@ -34,7 +34,7 @@ const Layout: React.FunctionComponent<Props> = ({
       </div>
     </header>
 
-    { children}
+    {children}
 
     <footer className="">
       <hr />
@@ -43,7 +43,7 @@ const Layout: React.FunctionComponent<Props> = ({
           <span>
             <Link href="/">
               FAQ・トラブルシューティング - N予備校プログラミングコース
-          </Link>
+            </Link>
           </span>
         </div>
       </div>
