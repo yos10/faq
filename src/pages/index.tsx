@@ -116,7 +116,7 @@ const IndexPage = () => {
                     </div>
                   </div>
                   <div className=" ml-3 sm:w-96 leading-5 ">
-                    このサイトは、どなたでも記述の追加・変更提案が可能です。
+                    このサイトは、どなたでも記述の追加・変更提案ができます。
                   練習問題の提出と同様に<span className="text-blue-600 hover:text-blue-400 transition duration-300"> GitHub リポジトリ</span>
                   をフォークし、プルリクエストを送ってください。
                 </div>
