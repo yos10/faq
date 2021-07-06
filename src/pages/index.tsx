@@ -95,8 +95,8 @@ const IndexPage = () => {
               <Card hover={true} flex={true} href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja">
                 <div className="p-4 sm:flex items-center px-2">
                   <div className="pl-3 pb-2 sm:pl-2 sm:pb-0">
-                    <div className="pt-2">
-                      <Image src="/images/cc.png" width={88} height={31} />
+                    <div className="pt-0.5">
+                      <img src={`${process.env.GITHUB_PAGES ? '/faq' : ''}/images/cc.png`} width={88} height={31} />
                     </div>
                   </div>
                   <div className="ml-3 sm:w-72 leading-5 ">
@@ -112,7 +112,7 @@ const IndexPage = () => {
                 <div className="p-4 sm:flex items-center px-2">
                   <div className="pl-3 pb-2 sm:pl-2 sm:pb-0">
                     <div className="icon">
-                      <Image src="/images/github.png" width={100} height={100} />
+                      <img src="/images/github.png" width={100} height={100} />
                     </div>
                   </div>
                   <div className=" ml-3 sm:w-96 leading-5 ">
