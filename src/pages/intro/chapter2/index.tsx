@@ -29,7 +29,7 @@ const Chapter1Page = () => {
           </div>
 
           <div className="mt-5 mb-2">
-            <Card href="intro/chapter2/docker" hover={true} flex={false} >
+            <Card href="chapter2/docker" hover={true} flex={false} >
               <div className="p-4">
                 Docker 関連のトラブル →
               </div>
