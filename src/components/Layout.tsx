@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link';
 
 type Props = {
   title?: string
@@ -17,7 +18,7 @@ const Layout: React.FunctionComponent<Props> = ({
 
     <header className="px-5 ">
       <div className="max-w-4xl mx-auto pt-5 pb-2 border-gray-100 border-b">
-        <a href="/">
+        <Link href="/">
           <div className="flex items-center">
             <img className="icon ml-1 mb-0.5 cursor-pointer" src="/images/nyobiko.png" />
             <h1 className="leading-4 pl-4 cursor-pointer">
@@ -25,7 +26,7 @@ const Layout: React.FunctionComponent<Props> = ({
               <div className="font-bold text-xl ml-1">FAQ・トラブルシューティング</div>
             </h1>
           </div>
-        </a>
+        </Link>
 
       </div>
     </header>
@@ -37,9 +38,9 @@ const Layout: React.FunctionComponent<Props> = ({
       <div className="px-5 pt-3 pb-5 bg-gray-700 text-sm text-white font-bold">
         <div className="max-w-4xl mx-auto">
           <span>
-            <a href="/">
+            <Link href="/">
               FAQ・トラブルシューティング - N予備校プログラミングコース
-          </a>
+          </Link>
           </span>
         </div>
       </div>
