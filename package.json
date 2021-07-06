@@ -6,10 +6,11 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "export": "next build && next export"
+    "export": "next export"
   },
   "dependencies": {
     "autoprefixer": "^10.2.6",
+    "dotenv": "^10.0.0",
     "gray-matter": "^4.0.3",
     "grob": "^1.0.0",
     "next": "latest",
