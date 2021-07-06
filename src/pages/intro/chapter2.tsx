@@ -14,7 +14,7 @@ const Chapter1Page = () => {
             </span>
             </Link>
             &nbsp;/&nbsp;
-            <Link href="/intro">
+            <Link href="intro">
               <span className="cursor-pointer text-blue-600 hover:text-blue-400 transition duration-300">
                 プログラミング入門 Web アプリコース
             </span>
@@ -29,7 +29,7 @@ const Chapter1Page = () => {
           </div>
 
           <div className="mt-5 mb-2">
-            <Card href="/intro/chapter2/docker" hover={true} flex={false} >
+            <Card href="intro/chapter2/docker" hover={true} flex={false} >
               <div className="p-4">
                 Docker 関連のトラブル →
               </div>
