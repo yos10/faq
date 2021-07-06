@@ -43,3 +43,28 @@ export const getAllPosts = () => {
     .map((file) => file.split(postsPrefix).pop())
     .map((slug) => (slug as string).replace(/\.md$/, '').split('/'))
 }
+
+/**
+ * コースの種類から、そのコースの全ての PostsData を返す関数
+ * @param course コースの種類
+ * @returns 当該コースの全ての PostsData
+ */
+export const getPostsData = (course: string) => {
+  const allPosts = getAllPosts();
+  const postsData = allPosts
+    .filter(post => post[0] === course)
+    .map(post => {
+      const postData = getPostBySlug(post, [
+        'date',
+        'title',
+      ]);
+      if (!postData.title) {
+        postData.title = `${post[1]} のトラブル`;
+      }
+      return {
+        ...postData,
+        path: `/${post[0]}/${post[1]}`
+      }
+    });
+  return postsData;
+}

@@ -1,29 +1,30 @@
-import Layout from '../../components/Layout';
-import Link from 'next/link';
+import IndexLayout from '../../components/IndexLayout';
+import { getPostsData } from '../../lib/api';
 
-const IndexPage = () => {
-  return (<>
-    <Layout>
-      <main className="p-5 bg-blue-50 min-h-screen">
-        <div className="max-w-4xl mx-auto px-1">
-          <div>
-            <Link href="/">
-              <span className="cursor-pointer text-blue-600 hover:text-blue-400 transition duration-300">
-                FAQ・トラブルシューティング
-            </span>
-            </Link>
-          &nbsp;/
-          その他
-        </div>
-          <div className="mt-6">
-            <h1 className="font-bold text-xl pb-1 border-b-2">
-              その他
-            </h1>
-          </div>
-        </div>
-      </main>
-    </Layout>
-  </>);
+const course = "others";
+
+type PostData = {
+  date: string;
+  title: string;
+  path: string;
+}
+
+type Props = {
+  posts: PostData[]
+}
+
+const IndexPage = ({ posts }: Props) => {
+  return <>
+    <IndexLayout course={course} posts={posts} />
+  </>
 };
 
 export default IndexPage;
+
+export const getStaticProps = () => {
+  return {
+    props: {
+      posts: getPostsData(course)
+    }
+  };
+}

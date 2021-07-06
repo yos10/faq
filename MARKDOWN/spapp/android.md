@@ -1,5 +1,5 @@
 ---
-title: Unity コースのトラブル
+title: Android コースのトラブル
 ---
 
-# Unity コースのトラブル
+# Android コースのトラブル
