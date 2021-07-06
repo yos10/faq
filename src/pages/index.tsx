@@ -1,6 +1,7 @@
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import Card from '../components/Card';
+import Image from 'next/image';
 
 const IndexPage = () => {
   return (
@@ -94,7 +95,9 @@ const IndexPage = () => {
               <Card hover={true} flex={true} href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja">
                 <div className="p-4 sm:flex items-center px-2">
                   <div className="pl-3 pb-2 sm:pl-2 sm:pb-0">
-                    <img src="/images/cc.png" />
+                    <div className="pt-2">
+                      <Image src="/images/cc.png" width={88} height={31} />
+                    </div>
                   </div>
                   <div className="ml-3 sm:w-72 leading-5 ">
                     このサイトは、
@@ -108,7 +111,9 @@ const IndexPage = () => {
               <Card hover={true} flex={true} href="https://github.com/nnn-training/faq">
                 <div className="p-4 sm:flex items-center px-2">
                   <div className="pl-3 pb-2 sm:pl-2 sm:pb-0">
-                    <img src="/images/github.png" />
+                    <div className="icon">
+                      <Image src="/images/github.png" width={100} height={100} />
+                    </div>
                   </div>
                   <div className=" ml-3 sm:w-96 leading-5 ">
                     このサイトは、どなたでも記述の追加・変更提案が可能です。
