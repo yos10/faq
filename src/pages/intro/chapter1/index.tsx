@@ -1,5 +1,5 @@
-import Layout from '../../components/Layout';
-import Card from '../../components/Card';
+import Layout from '../../../components/Layout';
+import Card from '../../../components/Card';
 import Link from 'next/link';
 
 const Chapter1Page = () => {
