@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import Link from 'next/link';
+
 import Card from '../components/Card';
 
 const IndexPage = () => {
@@ -10,13 +10,13 @@ const IndexPage = () => {
           <div>
             <p>
               こちらは、<strong className="text-blue-600 hover:text-blue-400 trainsition duration-300">
-                <Link href="https://www.nnn.ed.nico/pages/programming/">N予備校プログラミングコース</Link></strong>
+                <a href="https://www.nnn.ed.nico/pages/programming/">N予備校プログラミングコース</a></strong>
           を受講中のみなさんに向けた FAQ（よくある質問）ページです。
         </p>
             <p>
               このサイトでは、N予備校の
              <span className="text-blue-600 hover:text-blue-400 transition duration-300">
-                <Link href="https://www.nnn.ed.nico/questions">フォーラム Q&A </Link>
+                <a href="https://www.nnn.ed.nico/questions">フォーラム Q&A </a>
               </span>
              をもとに、プログラミングに関するトラブルの対処法をまとめています。
           </p>
@@ -67,7 +67,7 @@ const IndexPage = () => {
             <p className="mt-3">このサイトに記載してある方法を試してもうまくいかない場合や、該当するページが存在しない場合は、
             N予備校の
              <span className="text-blue-600 hover:text-blue-400 transition duration-300">
-                <Link href="https://www.nnn.ed.nico/questions">フォーラム Q&A </Link>
+                <a href="https://www.nnn.ed.nico/questions">フォーラム Q&A </a>
               </span>
             で質問してみましょう！
             </p>
@@ -84,9 +84,9 @@ const IndexPage = () => {
           </div>
 
           <div className="flex mt-5">
-            <Link href="https://www.nnn.ed.nico/questions">
+            <a href="https://www.nnn.ed.nico/questions">
               <div className="rounded-full bg-blue-700 py-2 px-5 text-white font-bold hover:bg-blue-800 cursor-pointer transition duration-300">N予備校フォーラム Q&A へ →</div>
-            </Link>
+            </a>
           </div>
 
           <div className="mt-10 flex flex-wrap">

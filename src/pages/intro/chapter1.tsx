@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout';
 import Card from '../../components/Card';
-import Link from 'next/link';
+
 
 const Chapter1Page = () => {
   return <>
@@ -8,17 +8,17 @@ const Chapter1Page = () => {
       <main className="p-5 bg-blue-50 min-h-screen">
         <div className="max-w-4xl mx-auto px-1">
           <div>
-            <Link href="/">
+            <a href="/">
               <span className="cursor-pointer text-blue-600 hover:text-blue-400 transition duration-300">
                 FAQ・トラブルシューティング
             </span>
-            </Link>
+            </a>
             &nbsp;/&nbsp;
-            <Link href="/intro">
+            <a href="/intro">
               <span className="cursor-pointer text-blue-600 hover:text-blue-400 transition duration-300">
                 プログラミング入門 Web アプリコース
             </span>
-            </Link>
+            </a>
             &nbsp;/
             第 1 章
           </div>

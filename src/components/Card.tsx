@@ -1,9 +1,7 @@
-import Link from 'next/link';
-
 const Card = ({ children, href, hover, flex }) => {
   return (
     <div className={flex ? "flex" : ""}>
-      <Link href={href}>
+      <a href={href}>
         {hover ?
           <div className="bg-white rounded-lg shadow cursor-pointer hover:bg-gray-50 transition duration-300">
             {children}
@@ -13,7 +11,7 @@ const Card = ({ children, href, hover, flex }) => {
             {children}
           </div>
         }
-      </Link>
+      </a>
     </div>
   );
 };
