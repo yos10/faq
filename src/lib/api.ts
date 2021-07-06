@@ -1,26 +1,17 @@
 import fs from 'fs'
 import glob from 'glob'
 import { join } from 'path'
-import matter from 'gray-matter'
+import grayMatter from 'gray-matter'
 
-// markdownファイルのを追加する場所のpathを定義
-const postDirPrefix = 'MARKDOWN/'
-const postsDirectory = join(process.cwd(), postDirPrefix)
+const postsPrefix = 'MARKDOWN/'
+const postsPath = join(process.cwd(), postsPrefix)
 
-// `getStaticProps()`で使用する
-// 引数で(["bar", "baz"], ["date", "title", "content"])を受け取った時、
-// `bar/baz.md`のファイルの中身を解析していい感じに以下のようなオブジェクトにして返すように
-//  {
-//    date: "2020-10-01"  // front-matterの情報
-//    title: "markdown title"  // front-matterの情報
-//    content: "<div>コンテンツ<div>"  // markdownのコードの中身
-//  }
 export const getPostBySlug = (slugArray: string[], fields: string[] = []) => {
   const matchedSlug = slugArray.join('/')
-  const realSlug = matchedSlug.replace(/\.md$/, '')
-  const fullPath = join(postsDirectory, `${realSlug}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
+  const actualSlug = matchedSlug.replace(/\.md$/, '')
+  const filePath = join(postsPath, `${actualSlug}.md`)
+  const fileContent = fs.readFileSync(filePath, 'utf8')
+  const { data, content } = grayMatter(fileContent)
 
   type Items = {
     [key: string]: string | string[]
@@ -41,11 +32,14 @@ export const getPostBySlug = (slugArray: string[], fields: string[] = []) => {
   return items
 }
 
-// 'src/_posts/**/*.md`のすべてのファイルを取得して配列にして返す
-// 'src/_posts/foo.md`と'src/_posts/bar/baz.md'がある場合[["foo"], ["bar", "baz"]]を返す 
+/**
+ * 'MARKDOWN/'以下の全ファイルの配列を返す関数
+ * 例えば、'MARKDOWN/aaa.md'と'MARKDOWN/aaa/bbb.md'がある場合、[["aaa"], ["bbb", "ccc"]]を返す
+ * @returns 'MARKDOWN/'以下の全ファイルの配列
+ */
 export const getAllPosts = () => {
-  const entries = glob.sync(`${postDirPrefix}/**/*.md`)
+  const entries = glob.sync(`${postsPrefix}/**/*.md`)
   return entries
-    .map((file) => file.split(postDirPrefix).pop())
+    .map((file) => file.split(postsPrefix).pop())
     .map((slug) => (slug as string).replace(/\.md$/, '').split('/'))
 }

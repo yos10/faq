@@ -1,5 +1,11 @@
+import Layout from '../components/Layout';
+
 const IndexPage = () => {
-  return <h1>こんにちは</h1>
+  return (
+    <Layout>
+      こんにちは
+    </Layout>
+  )
 }
 
 export default IndexPage;

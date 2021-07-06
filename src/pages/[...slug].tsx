@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { getPostBySlug, getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import remark from 'remark'
-import html from 'remark-html'
+import remarkHtml from 'remark-html'
 
 type Props = {
   post: {
@@ -18,15 +18,13 @@ const Post = ({ post }: Props) => {
   return (
     <>
       {router.isFallback ? (
-        <h1>Loading…</h1>
+        <h1>ロード中...</h1>
       ) : (
         <>
-          <article>
-            <Head>
-              <title>{post.title} | Next.js Blog Example with</title>
-            </Head>
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
-          </article>
+          <Head>
+            <title>{post.title} | FAQ</title>
+          </Head>
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </>
       )}
     </>
@@ -42,8 +40,8 @@ type Params = {
 }
 
 const markdownToHtml = async (markdown: string) => {
-  const result = await remark().use(html).process(markdown)
-  return result.toString()
+  const htmlResult = await remark().use(remarkHtml).process(markdown)
+  return htmlResult.toString()
 }
 
 export const getStaticProps = async ({ params }: Params) => {
