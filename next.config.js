@@ -6,5 +6,10 @@ module.exports = {
     :
     ''
   ,
+  basePath: process.env.GITHUB_PAGES ?
+    '/faq'
+    :
+    ''
+  ,
   trailingSlash: true,
 };
