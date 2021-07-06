@@ -17,20 +17,21 @@ const Layout: React.FunctionComponent<Props> = ({
     </Head>
 
     <header>
-      <div className="flex items-center px-5 pt-5 pb-2 border-gray-100 border-b">
+      <div className=" px-5 pt-5 pb-2 border-gray-100 border-b">
         <Link href="/">
-          <>
+          <div className="flex items-center">
             <img className="icon ml-1 mb-0.5 cursor-pointer" src="/images/nyobiko.png" />
             <h1 className="leading-4 pl-4 cursor-pointer">
               <div className="ml-1">N予備校プログラミングコース</div>
               <div className="font-bold text-xl ml-1">FAQ・トラブルシューティング</div>
             </h1>
-          </>
+          </div>
         </Link>
+
       </div>
     </header>
 
-    {children}
+    { children}
 
     <footer>
       <hr />
@@ -42,7 +43,7 @@ const Layout: React.FunctionComponent<Props> = ({
         </span>
       </div>
     </footer>
-  </div>
+  </div >
 
 )
 

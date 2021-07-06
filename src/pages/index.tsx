@@ -91,11 +91,11 @@ const IndexPage = () => {
         <div className="mt-10 flex flex-wrap">
           <div className="mb-2.5 mr-3">
             <Card hover={true} flex={true} href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja">
-              <div className="p-4 flex items-center px-2">
-                <div>
+              <div className="p-4 sm:flex items-center px-2">
+                <div className="pl-3 pb-2 sm:pl-2 sm:pb-0">
                   <img src="/images/cc.png" />
                 </div>
-                <div className="ml-3 w-72 leading-5 ">
+                <div className="ml-3 sm:w-72 leading-5 ">
                   このサイトは、
                   <span className="text-blue-600 hover:text-blue-400 transition duration-300">クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</span>
                   の下、提供されています。
@@ -105,14 +105,13 @@ const IndexPage = () => {
           </div>
           <div className="mb-3">
             <Card hover={true} flex={true} href="https://github.com/nnn-training/faq">
-              <div className="p-4 flex items-center px-2">
-                <div>
+              <div className="p-4 sm:flex items-center px-2">
+                <div className="pl-3 pb-2 sm:pl-2 sm:pb-0">
                   <img src="/images/github.png" />
                 </div>
-                <div className="ml-3 w-96 leading-5 ">
+                <div className=" ml-3 sm:w-96 leading-5 ">
                   このサイトは、どなたでも記述の追加・変更提案が可能です。
-                  練習問題の提出と同様に
-                  <span className="text-blue-600 hover:text-blue-400 transition duration-300"> GitHub リポジトリ</span>
+                  練習問題の提出と同様に<span className="text-blue-600 hover:text-blue-400 transition duration-300"> GitHub リポジトリ</span>
                   をフォークし、プルリクエストを送ってください。
                 </div>
               </div>
