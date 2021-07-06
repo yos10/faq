@@ -26,7 +26,7 @@ const IndexPage = () => {
             <h1 className="text-xl font-bold mt-8 py-2 px-3 bg-yellow-600 text-white">コース別トラブルシューティング</h1>
 
             <div className="mt-5">
-              <Card hover="true" href="/intro" flex={false}>
+              <Card hover="true" href="intro" flex={false}>
                 <div className="">
                   <h2 className="px-4 pt-3 pb-2 text-xl hover:text-gray-500 transition duration-300 pb-1 border-b">プログラミング入門 Web アプリコース →</h2>
                   <p className="px-4 pb-4 pt-3 font-bold text-gray-500">コンソールや Docker Desktop の環境構築、Heroku へのデプロイなど、入門コースに関連するトラブル</p>
@@ -35,7 +35,7 @@ const IndexPage = () => {
             </div>
 
             <div className="mt-3">
-              <Card hover="true" href="/webapp" flex={false}>
+              <Card hover="true" href="webapp" flex={false}>
                 <div className="">
                   <h2 className="px-4 pt-3 pb-2 text-xl hover:text-gray-500 transition duration-300 pb-1 border-b">大規模 Web アプリ →</h2>
                   <p className="px-4 pb-4 pt-3 font-bold text-gray-500">Scala 基礎コース、Scala 応用コース、並行処理プログラミングコース、実践大規模 Web アプリコースに関連するトラブル</p>
@@ -44,7 +44,7 @@ const IndexPage = () => {
             </div>
 
             <div className="mt-3">
-              <Card hover="true" href="/spapp" flex={false}>
+              <Card hover="true" href="spapp" flex={false}>
                 <div className="">
                   <h2 className="px-4 pt-3 pb-2 text-xl hover:text-gray-500 transition duration-300 pb-1 border-b">スマートフォンアプリ →</h2>
                   <p className="px-4 pb-4 pt-3 font-bold text-gray-500">iOS コース、アンドロイドコースに関連するトラブル</p>
