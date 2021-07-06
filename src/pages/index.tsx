@@ -26,7 +26,7 @@ const IndexPage = () => {
             <h1 className="text-xl font-bold mt-8 py-2 px-3 bg-yellow-600 text-white">コース別トラブルシューティング</h1>
 
             <div className="mt-5">
-              <Card hover="true" href="/intro" flex={false}>
+              <Card hover="true" href="intro" flex={false}>
                 <div className="">
                   <h2 className="px-4 pt-3 pb-2 text-xl hover:text-gray-500 transition duration-300 pb-1 border-b">プログラミング入門 Web アプリコース →</h2>
                   <p className="px-4 pb-4 pt-3 font-bold text-gray-500">コンソールや Docker Desktop の環境構築、Heroku へのデプロイなど、入門コースに関連するトラブル</p>

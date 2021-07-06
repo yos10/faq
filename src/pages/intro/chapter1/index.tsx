@@ -29,7 +29,7 @@ const Chapter1Page = () => {
           </div>
 
           <div className="mt-5 mb-2">
-            <Card href="chapter1/vscode" hover={true} flex={false} >
+            <Card href="vscode" hover={true} flex={false} >
               <div className="p-4">
                 VS Code のトラブル →
               </div>
