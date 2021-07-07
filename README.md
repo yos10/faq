@@ -1,6 +1,6 @@
 # FAQ・トラブルシューティング
-こちらは、[N予備校プログラミングコース FAQ・トラブルシューティング](https://nnn-training.github.io/faq)の GitHub リポジトリです。
-
+こちらは、[N予備校プログラミングコース FAQ・トラブルシューティング](https://nnn-training.github.io/faq)の GitHub リポジトリです。<br>
+2020 年度以前のトラブルシューティングは、[こちら](https://progedu.github.io/intro-curriculum-faq)です。
 
 ## ライセンス
 
