@@ -3,6 +3,7 @@ import { getPostBySlug, getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import remark from 'remark'
 import remarkHtml from 'remark-html'
+import Layout from '../components/Layout'
 
 type Props = {
   post: {
@@ -24,7 +25,13 @@ const Post = ({ post }: Props) => {
           <Head>
             <title>{post.title} | FAQ</title>
           </Head>
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          <Layout>
+            <div className="px-5 bg-blue-50 pt-5 pb-20">
+              <div className="max-w-4xl mx-auto bg-white rounded-2xl px-4 pb-20">
+                <div className="markdown-body markdown" dangerouslySetInnerHTML={{ __html: post.content }} />
+              </div>
+            </div>
+          </Layout>
         </>
       )}
     </>
