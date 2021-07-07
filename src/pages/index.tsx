@@ -48,7 +48,7 @@ const TopPage = () => {
               <Card hover="true" href="/spapp" flex={false}>
                 <div className="">
                   <h2 className="px-4 pt-3 pb-2 text-xl hover:text-gray-500 transition duration-300 pb-1 border-b">スマートフォンアプリ →</h2>
-                  <p className="px-4 pb-4 pt-3 font-bold text-gray-500">iOS コース、アンドロイドコースに関連するトラブル</p>
+                  <p className="px-4 pb-4 pt-3 font-bold text-gray-500">iOS コース、Android コースに関連するトラブル</p>
                 </div>
               </Card>
             </div>
