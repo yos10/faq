@@ -7,7 +7,7 @@ import remarkHtml from 'remark-html'
 import Layout from '../components/Layout';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/a11y-dark.css';
-
+import 'github-markdown-css';
 
 type Props = {
   post: {
@@ -36,7 +36,7 @@ const Post = ({ post }: Props) => {
           <Layout>
             <main className="px-5 bg-blue-50 pt-5 pb-20 min-h-screen">
               <div className="max-w-4xl mx-auto bg-white rounded-2xl px-4 pb-20">
-                <div className="markdown-body markdown" dangerouslySetInnerHTML={{ __html: post.content }} />
+                <div className="markdown-body" dangerouslySetInnerHTML={{ __html: post.content }} />
               </div>
             </main>
           </Layout>
