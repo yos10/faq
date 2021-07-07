@@ -1,6 +1,11 @@
 # FAQ・トラブルシューティング
 こちらは、[N予備校プログラミングコース FAQ・トラブルシューティング](https://nnn-training.github.io/faq)の GitHub リポジトリです。
 
+
+## ライセンス
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />この サイト は <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</a>の下に提供されています。
+
 ## プルリクエストの出し方
 
 ### ざっくり概要
@@ -53,11 +58,6 @@ title: サンプルタイトル
 のように書くことで、ファイルのメタ情報を記述できます。
 
 この **`title`は、目次のタイトルになりますので、必ず記述してください。**
-
-## ライセンス
-
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />この サイト は <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</a>の下に提供されています。
-
 
 ## このサイトの構成
 このサイトは Next.js + TypeScript で実装されています。
