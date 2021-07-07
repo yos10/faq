@@ -111,7 +111,7 @@ $ git clone git@github.com:nnn-training/faq.git
 $ cd faq
 ```
 
-Next.js アプリを起動します。
+Yarn を利用して Next.js アプリを起動します。
 
 ```bash
 $ yarn install
