@@ -98,16 +98,7 @@ $ cd faq
 `docker-compose` を利用してコンテナを起動します。
 
 ```bash
-$ docker-compose up -d
-$ docker-compose exec app bash
-```
-
-コンテナのコンソールで Next.js アプリを起動します。
-
-```bash
-$ cd /app
-$ yarn install
-$ yarn dev
+$ docker-compose up
 ```
 
 ### 2. ローカルの Node.js を利用する方法
