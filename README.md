@@ -1,6 +1,7 @@
 # FAQ・トラブルシューティング
-こちらは、[N予備校プログラミングコース FAQ・トラブルシューティング](https://nnn-training.github.io/faq)の GitHub リポジトリです。
+こちらは、[N予備校プログラミングコース FAQ・トラブルシューティング](https://nnn-training.github.io/faq)の GitHub リポジトリです。<br>
 
+（[2020 年度以前のトラブルシューティング](https://progedu.github.io/intro-curriculum-faq)のリポジトリは、[こちら](https://github.com/progedu/intro-curriculum-faq)です。）
 
 ## ライセンス
 
@@ -53,6 +54,23 @@ title: サンプルタイトル
 ## このサイトの構成
 このサイトは Next.js + TypeScript で実装されています。 
 サイトそのものの機能を改修するとき以外、Next.js や TypeScript の知識は必要ありません。
+
+### ディレクトリ構成
+
+```
+/
+　├ MARKDOWN/    # ここを編集します
+　│　 　├ ...
+　│  └ ...
+　│
+　├ public/ 
+　│  └ /images   # 画像を追加するときはこのフォルダです
+　│
+　├ src/ 
+　│  └ ...       # Next.js アプリの実装です（変更不要）
+　│
+　└ ...          # 各種設定ファイルです（変更不要）
+```
 
 ## デプロイの仕組み
 このリポジトリの `main` ブランチに変更がマージされると、GitHub Actions によって自動的に Next.js アプリのビルドが開始されます。 
