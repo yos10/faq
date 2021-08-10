@@ -47,7 +47,7 @@ Docker Desktop が起動している場合、タスクバー（Windows）やメ�
 また、コマンドラインからも Docker Desktop のステータスを確認できます。
 
 ```
-docker --version
+docker version
 ```
 
 というコマンドを入力した際に
