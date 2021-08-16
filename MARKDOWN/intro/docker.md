@@ -4,7 +4,13 @@ title: Docker 関連のトラブル
 
 # Docker 関連のトラブル
 
-## Docker Desktop がインストールできない
+---
+**目次**
+- [(1) Docker Desktop がインストールできない](#1)
+- [(2) docker-compose up -d（コンテナ起動）で失敗する](#2)
+---
+
+## (1) Docker Desktop がインストールできない <a id="1"></a>
 
 ### 問題詳細
 
@@ -20,7 +26,7 @@ Docker が対応している OS のバージョンは、次の通りです（202
   - 以上 2 つは、[Docker のヘルプページ](https://docs.docker.com/docker-for-mac/install/#system-requirements)の内容に基づきます。
 - Windows：Windows 10（詳細なバージョンは [Docker のヘルプページ](https://docs.docker.com/docker-for-windows/install/#system-requirements)を参照してください。Windows の Edition（例えば Windows 10 Home や Windows 10 Pro など）によってバージョンが異なります。）
 
-### 解決方法
+### → 解決方法
 
 OS のアップデートを試してください。
 
@@ -29,14 +35,21 @@ OS のアップデートを試してください。
 
 なお、今後も OS のバージョンが古くなると、Docker が動かなくなる可能性があります。OS はこまめにアップデートすると良いでしょう。
 
-## `docker-compose up -d` （コンテナ起動）で失敗する
+<br>
+
+## (2) `docker-compose up -d` （コンテナ起動）で失敗する<a id="2"></a>
 
 ### 問題詳細
 
 Docker Desktop のインストールには成功したものの、コンテナ起動に失敗する場合があります。  
 複数の原因が考えられます。
 
-### 原因1
+- [・原因1（Windows、Mac）](#2-1)
+- [・原因2（Windows、Mac）](#2-2)
+- [・原因3（Windows、Mac）](#2-3)
+- [・原因4（Windows のみ）](#2-4)
+
+### 原因1（Windows、Mac）<a id="2-1"></a>
 
 そもそも Docker Desktop が起動していない場合 `docker` コマンドを使用することはできません。  
 デフォルトでは Docker Desktop は PC 起動時に同時に立ち上がる設定になっていることが多いのですが、PC の状態により起動していないケースもあります。  
@@ -64,11 +77,66 @@ Error response from daemon: dial unix docker.raw.sock: connect: connection refus
 
 というメッセージが表示されなければ、正しく起動できているはずです。
 
-### 解決方法
+### → 原因1の解決方法
 
 アプリケーション一覧から Docker のアイコンをクリックし、起動してください。
 
-### 原因2（Windows ユーザー向け）
+<br>
+
+### 原因2（Windows、Mac）<a id="2-2"></a>
+
+他の起動中の Docker コンテナと衝突して、新しくコンテナが起動できないことがあります。
+
+例えば、次のようなエラーが表示されます。
+
+```
+Starting sample_app_1 ... error
+
+ERROR: for sample_app_1  Cannot start service app: driver failed programming external connectivity on endpoint sample_app_1 (5xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0): Bind for 0.0.0.0:8000 failed: port is already allocated
+
+...
+```
+
+### → 原因2の解決方法
+
+どのディレクトリのコンテナが衝突しているかわかる場合は、当該ディレクトリに移動してコンテナを終了・破棄します。
+
+```
+docker-compose down
+```
+
+わからない場合は、次のように**全てのコンテナを終了・破棄**します（コンテナは原則破棄するものなので、特に悪影響はありません）。
+
+```
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+```
+
+再度起動したいコンテナのディレクトリに移動して、`docker-compose up -d` を試してみてください。
+
+<br>
+
+### 原因3（Windows、Mac）<a id="2-3"></a>
+
+Docker Desktop が正常に起動していない場合、次のように表示される場合があります。
+
+```
+Traceback (most recent call last):
+  File "urllib3/connectionpool.py", line 670, in urlopen
+  File "urllib3/connectionpool.py", line 392, in _make_request
+  File "http/client.py", line 1255, in request
+  File "http/client.py", line 1301, in _send_request
+  File "http/client.py", line 1250, in endheaders
+...
+```
+
+### → 原因3の解決方法
+
+Docker Desktop を再起動してみてください。
+
+<br>
+
+### 原因4（Windows ユーザー向け）<a id="2-4"></a>
 
 やや特殊ですが、過去に Docker Desktop ではなく [Docker Toolbox](https://docs.docker.jp/toolbox/overview.html) を使って Docker を使用した経験のある方は、その際の設定が誤って読み込まれてしまうことがあります。
 
@@ -81,7 +149,7 @@ DOCKER_TLS_VERIFY
 DOCKER_MACHINE_NAME
 ```
 
-### 解決方法
+### → 原因4の解決方法
 
 `DOCKER_` で始まる環境変数を一括して削除します。
 
@@ -92,3 +160,4 @@ Remove-Item Env:DOCKER_*
 ```
 
 と入力してください。
+
