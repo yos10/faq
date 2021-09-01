@@ -15,14 +15,14 @@ jobs:
       - name: install
         run: |
           yarn install
-      - name: generate sitemap
-        run: |
-          npx next-sitemap
       - name: build
         run: |
           yarn build
         env:
           GITHUB_PAGES: true
+      - name: generate sitemap
+        run: |
+          npx next-sitemap
       - name: export
         run: |
           yarn export
