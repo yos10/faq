@@ -24,6 +24,7 @@ jobs:
         run: |
           yarn export
           touch out/.nojekyll
+          npx next-sitemap
       - name: deploy
         uses: peaceiris/actions-gh-pages@v2.3.1
         env:
