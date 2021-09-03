@@ -8,6 +8,7 @@ title: Docker 関連のトラブル
 **目次**
 - [(1) Docker Desktop がインストールできない](#1)
 - [(2) docker-compose up -d（コンテナ起動）で失敗する](#2)
+- [(3) (winpty) docker-compose exec app bash で失敗する](#3)
 ---
 
 ## (1) Docker Desktop がインストールできない <a id="1"></a>
@@ -161,3 +162,20 @@ Remove-Item Env:DOCKER_*
 
 と入力してください。
 
+## (3) `(winpty) docker-compose exec app bash` で失敗する <a id="3"></a>
+
+### 表記について
+
+ここでは、表記を簡単にするため、**Windows でのコマンドと Mac でのコマンドをまとめて「`(winpty) docker-compose exec app bash`」と書きます**。そのため、Windows の場合は「`winpty docker-compose exec app bash`」に、Mac の場合は「`docker-compose exec app bash`」に、それぞれ読み替えてください。
+
+### 問題詳細
+
+`docker-compose up -d`（コンテナ起動）には成功したものの、`(winpty) docker-compose exec app bash` でコンテナに入れない場合があります。
+
+### 原因
+
+Dockerfile を一度変更したことがあるにもかかわらず、`docker-compose up --build` でイメージをビルドし直していない可能性があります。
+
+### →解決方法
+
+`docker-compose up --build` 実行した後に、`(winpty) docker-compose exec app bash` を実行してみてください。
