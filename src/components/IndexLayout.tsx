@@ -49,8 +49,8 @@ const IndexLayout = ({ course, posts }: Props) => {
           </div>
 
           <div className="mt-5">
-            {posts.map(post => (
-              <div className="mb-2">
+            {posts.map((post, index) => (
+              <div key={index} className="mb-2">
                 <Card href={post.path} hover={true} flex={false} >
                   <div className="p-4">
                     {post.title} →
