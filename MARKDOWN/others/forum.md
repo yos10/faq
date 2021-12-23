@@ -12,6 +12,8 @@ title: フォーラムのトラブル
 
 1. ターミナルアプリを起動し `cd` コマンドを使用してクローンしたディレクトリへ移動します。
 
+1. `git remote rename origin upstream` コマンドを入力してフォーク元リポジトリを upstream として追加します。
+
 1. `basename "$PWD"` コマンドを入力して新規に作成するリポジトリ用の名前を取得します。
 
 1. 第1章 第18節 の [GitHub で Web サイト公開](https://www.nnn.ed.nico/contents/guides/5198) の **【リポジトリの作り方 その 2 】新規作成** を参考にリポジトリを[新規作成](https://github.com/new)します。
